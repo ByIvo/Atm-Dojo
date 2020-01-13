@@ -2,7 +2,7 @@ package atm;
 
 public class ATMMachine {
 
-    private static final int[] EXISTING_NOTES = {100, 50, 20, 10, 5, 2, 1};
+    private static final int[] EXISTING_BILLS = {100, 50, 20, 10, 5, 2, 1};
 
     public Withdraw withDraw(int amount) {
         if (amount <= 0) {
@@ -16,12 +16,12 @@ public class ATMMachine {
         Withdraw withdraw = new Withdraw();
         int leftAmount = amount;
 
-        for(int banknoteType : EXISTING_NOTES) {
-            if (leftAmount >= banknoteType) {
-                int numberOfNotes = leftAmount / banknoteType;
-                leftAmount = leftAmount % banknoteType;
+        for(int billValue : EXISTING_BILLS) {
+            if (leftAmount >= billValue) {
+                int numberOfBills = leftAmount / billValue;
+                leftAmount = leftAmount % billValue;
 
-                withdraw.with(numberOfNotes, banknoteType);
+                withdraw.with(numberOfBills, billValue);
             }
         }
 

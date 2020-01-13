@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ATMMachineTest {
 
     @Test
-    public void givenA100Amount_WhenWithdrawingSomeCash_ShouldReturn1Note() {
+    public void givenA100Amount_WhenWithdrawingSomeCash_ShouldReturn1Bill() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(100);
@@ -19,7 +19,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA1000Amount_WhenWithdrawingSomeCash_ShouldReturn10NotesOf100() {
+    public void givenA1000Amount_WhenWithdrawingSomeCash_ShouldReturn10BillsOf100() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(1000);
@@ -28,7 +28,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA50Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf50() {
+    public void givenA50Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf50() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(50);
@@ -37,7 +37,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA20Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf20() {
+    public void givenA20Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf20() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(20);
@@ -46,7 +46,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA10Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf10() {
+    public void givenA10Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf10() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(10);
@@ -55,7 +55,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA5Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf5() {
+    public void givenA5Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf5() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(5);
@@ -64,7 +64,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenA2Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf2() {
+    public void givenA2Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf2() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(2);
@@ -73,7 +73,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenAn1Amount_WhenWithdrawingSomeCash_ShouldReturn1NoteOf1() {
+    public void givenAn1Amount_WhenWithdrawingSomeCash_ShouldReturn1BillOf1() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(1);
@@ -104,7 +104,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenAnAmount_WhenItsImpossibleToUseOnlyOneNote_ShouldReturnComposeNotesToFinishTheWithdraw() {
+    public void givenAnAmount_WhenItsImpossibleToUseOnlyOneBill_ShouldReturnComposeBillsToFinishTheWithdraw() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(150);
@@ -116,7 +116,7 @@ class ATMMachineTest {
     }
 
     @Test
-    public void givenAnAmount_WhenItsImpossibleToUseOnlyOneNote_ShouldBeAbleToComposeWithdrawWithAllExistingNotes() {
+    public void givenAnAmount_WhenItsImpossibleToUseOnlyOneBill_ShouldBeAbleToComposeWithdrawWithAllExistingBills() {
         ATMMachine atmMachine = new ATMMachine();
 
         Withdraw withdraw = atmMachine.withDraw(188);

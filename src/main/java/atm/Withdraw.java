@@ -11,9 +11,9 @@ public class Withdraw {
         bills = new HashMap<>();
     }
 
-    protected Withdraw(int numberOfBanknotes, int banknoteType) {
+    protected Withdraw(int numberOfBills, int billType) {
         this();
-        with(numberOfBanknotes, banknoteType);
+        with(numberOfBills, billType);
     }
 
     @Override
@@ -37,8 +37,8 @@ public class Withdraw {
                 '}';
     }
 
-    protected Withdraw with(int numberOfBanknotes, int banknoteType) {
-        bills.put(banknoteType, numberOfBanknotes);
+    protected Withdraw with(int numberOfBills, int billType) {
+        bills.put(billType, numberOfBills);
         return this;
     }
 }
